@@ -18,6 +18,7 @@ import java.util.Set;
 @Builder
 
 public class Skieur implements Serializable {
+    //remarque: il faut pas mettre
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long numSkieur;
