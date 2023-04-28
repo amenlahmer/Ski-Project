@@ -1,6 +1,8 @@
 package com.example.demo.Entity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.nio.MappedByteBuffer;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -28,7 +30,7 @@ public class Piste implements Serializable {
     private Couleur couleur;
     private Integer longueur;
     private Integer pente;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy ="pistes")
     private Set<Skieur> skieurs;
 
 }

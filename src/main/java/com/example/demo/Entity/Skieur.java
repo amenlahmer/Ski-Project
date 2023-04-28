@@ -28,7 +28,7 @@ public class Skieur implements Serializable {
     private Date dateNaissance;
     private String ville ;
 
-    @ManyToMany(mappedBy = "skieurs",cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
     private Set<Piste> pistes;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="skieur")
     private Set<Inscription> inscriptions;
